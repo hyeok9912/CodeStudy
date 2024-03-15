@@ -1,7 +1,7 @@
 function findMode(numbers) {
   const numMap = new Map();
   
-  // 숫자별 등장 횟수 카운트
+  // 숫자별 등장 횟수 카운트 
   numbers.forEach((num) => {
     if (numMap.has(num)) {
       numMap.set(num, numMap.get(num) + 1);

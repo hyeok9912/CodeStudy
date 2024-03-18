@@ -1,19 +1,16 @@
+// 나의 풀이
+
 function solution(n) {
     var answer = 0;
-    for(let i = 1; i <= n; i++){ // 1~n번 까지 반복
-        if(n % 7 === 0){        // n % 7 === 0 이면 
-             
+        if(n % 7 === 0){               
             return n/7
-        }else if(n % 7 <= 1){
-             
+        }else if(n % 7 >= 1){
             return parseInt(n/7)+1
         }
-    }
     
     
     return answer;
 }
-
 
 
 //// 다른사람 풀이

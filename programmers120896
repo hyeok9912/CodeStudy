@@ -1,0 +1,18 @@
+function solution(s) {
+    var answer = '';
+    let split = s.split('')
+    let countMap = new Map()
+    for(let str of split){
+        if(!countMap.has(str)) countMap.set(str,0)
+        if(countMap.has(str)) countMap.set(str, countMap.get(str)+1)
+    }
+    
+    let singlechar = []
+    for(let [char,count] of countMap){
+        if(count === 1)singlechar.push(char)
+    }
+    answer = singlechar.sort().join('')
+    return answer;
+}
+//// Map 객체를 이해하고 싶어서 억지로 써서 풀어보았다
+//// 다른 풀이를 보니 indexOf 와 lastIndexOf를 사용하여 쉽게 풀 수 있는 문제였다
